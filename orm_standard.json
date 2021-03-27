@@ -21,7 +21,7 @@
       "paint": {"line-gap-width": 3.5, "line-color": "#797979"}
     },
     {
-      "id": "casing_historic_railways",
+      "id": "casing-historic",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -59,20 +59,7 @@
       "paint": {"line-color": "#000000"}
     },
     {
-      "id": "spur_tracks",
-      "type": "line",
-      "source": "openmaptiles-railway",
-      "source-layer": "railway",
-      "filter": [
-        "all",
-        ["==", ["get", "service"], "spur"],
-        ["!", ["has", "usage"]]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {"line-color": "#87491D"}
-    },
-    {
-      "id": "branch_railways",
+      "id": "railways-branch",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -84,7 +71,7 @@
       "paint": {"line-color": "#DACA00"}
     },
     {
-      "id": "main_railways",
+      "id": "railways-main",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -96,7 +83,7 @@
       "paint": {"line-color": "#FF8100"}
     },
     {
-      "id": "highspeed_railways",
+      "id": "railways-highspeed",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -109,7 +96,7 @@
       "paint": {"line-color": "#FF0C00"}
     },
     {
-      "id": "industrial_railways",
+      "id": "railways-industrial",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -117,7 +104,20 @@
       "paint": {"line-color": "#87491D"}
     },
     {
-      "id": "light_rail_tracks",
+      "id": "tracks-spur",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "service"], "spur"],
+        ["!", ["has", "usage"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "#87491D"}
+    },
+    {
+      "id": "tracks-light-rail",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -125,7 +125,7 @@
       "paint": {"line-color": "#00BD14"}
     },
     {
-      "id": "subway_tracks",
+      "id": "tracks-subway",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -133,7 +133,7 @@
       "paint": {"line-color": "#0300C3"}
     },
     {
-      "id": "tram_tracks",
+      "id": "tracks-tram",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -141,7 +141,7 @@
       "paint": {"line-color": "#D877B8"}
     },
     {
-      "id": "sidings",
+      "id": "tracks-siding",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -156,7 +156,7 @@
       "paint": {"line-width": 2}
     },
     {
-      "id": "yard_tracks",
+      "id": "tracks-yard",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -171,7 +171,7 @@
       "paint": {"line-width": 1.5}
     },
     {
-      "id": "crossover_tracks",
+      "id": "tracks-crossover",
       "type": "line",
       "source": "openmaptiles-railway",
       "source-layer": "railway",
@@ -203,6 +203,133 @@
         "text-halo-color": "rgba(0, 0, 255, 1)",
         "text-color": "#FFFFFF",
         "text-halo-width": 4
+      }
+    },
+    {
+      "id": "switches",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "class", "switch"],
+        ["!=", "local_operated", true],
+        ["!=", "resetting", true]
+      ],
+      "layout": {
+        "text-field": "{ref}",
+        "text-size": 11,
+        "text-font": ["Noto Sans Bold"]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-width": 2,
+        "text-halo-color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "switches-local-operated-copy",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "class", "switch"],
+        ["==", "local_operated", true]
+      ],
+      "layout": {
+        "text-field": "{ref}",
+        "text-size": 11,
+        "text-font": ["Noto Sans Bold"]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-width": 2,
+        "text-halo-color": "#FFFF00"
+      }
+    },
+    {
+      "id": "switches-resetting",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 16,
+      "filter": ["all", ["==", "class", "switch"], ["==", "resetting", true]],
+      "layout": {
+        "text-field": "{ref}",
+        "text-size": 11,
+        "text-font": ["Noto Sans Bold"]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-width": 2,
+        "text-halo-color": "#FF8000"
+      }
+    },
+    {
+      "id": "milestones",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 11,
+      "filter": ["all", ["==", "class", "milestone"]],
+      "layout": {
+        "text-field": "{railway_position}",
+        "text-size": 11,
+        "text-font": ["Noto Sans Bold"]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-width": 0.5,
+        "text-halo-color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "level-crossings",
+      "type": "circle",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 14,
+      "filter": ["all", ["==", "class", "level_crossing"]],
+      "paint": {"circle-radius": 4}
+    },
+    {
+      "id": "footway-crossings",
+      "type": "circle",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 14,
+      "filter": ["all", ["==", "class", "crossing"]],
+      "paint": {"circle-radius": 4}
+    },
+    {
+      "id": "stations-z8-z10",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "filter": ["all", ["==", "class", "station"]],
+      "layout": {
+        "text-field": "{ref}",
+        "text-font": ["Noto Sans Bold"],
+        "text-size": 12
+      }
+    },
+    {
+      "id": "stations-z11",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway_poi",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "class", "station"]],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Noto Sans Bold"],
+        "text-size": 12
       }
     }
   ],
