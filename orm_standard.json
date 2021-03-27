@@ -1,0 +1,210 @@
+{
+  "version": 8,
+  "name": "ORM standard",
+  "metadata": {"maputnik:renderer": "mbgljs", "openmaptiles:version": "3.x"},
+  "sources": {
+    "openmaptiles-railway": {
+      "type": "vector",
+      "url": "https://raiteilla.fi/tiles/data/v3.json"
+    }
+  },
+  "sprite": "",
+  "glyphs": "https://raiteilla.fi/tiles/fonts/{fontstack}/{range}.pbf?key={key}",
+  "layers": [
+    {
+      "id": "bridges",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": ["all", ["==", "brunnel", "bridge"]],
+      "paint": {"line-gap-width": 3.5, "line-color": "#797979"}
+    },
+    {
+      "id": "casing_historic_railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 9,
+      "filter": [
+        "any",
+        ["==", "subclass", "disused"],
+        ["==", "subclass", "abandoned"],
+        ["==", "subclass", "razed"]
+      ],
+      "paint": {
+        "line-gap-width": 1,
+        "line-width": 0.8,
+        "line-color": "#000000",
+        "line-opacity": 0.2
+      }
+    },
+    {
+      "id": "tunnels",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": ["all", ["==", "brunnel", "tunnel"]],
+      "layout": {"line-cap": "butt"},
+      "paint": {"line-width": 6, "line-color": "#ffffff", "line-opacity": 0.6}
+    },
+    {
+      "id": "railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": ["all", ["!", ["has", "usage"]], ["!", ["has", "service"]]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "#000000"}
+    },
+    {
+      "id": "spur_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "service"], "spur"],
+        ["!", ["has", "usage"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "#87491D"}
+    },
+    {
+      "id": "branch_railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "branch"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-color": "#DACA00"}
+    },
+    {
+      "id": "main_railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "main"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-color": "#FF8100"}
+    },
+    {
+      "id": "highspeed_railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "main"],
+        ["==", ["get", "highspeed"], "yes"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-color": "#FF0C00"}
+    },
+    {
+      "id": "industrial_railways",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "usage", "industrial"]],
+      "paint": {"line-color": "#87491D"}
+    },
+    {
+      "id": "light_rail_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "light_rail"]],
+      "paint": {"line-color": "#00BD14"}
+    },
+    {
+      "id": "subway_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "subway"]],
+      "paint": {"line-color": "#0300C3"}
+    },
+    {
+      "id": "tram_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "tram"]],
+      "paint": {"line-color": "#D877B8"}
+    },
+    {
+      "id": "sidings",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        ["==", ["get", "subclass"], "rail"],
+        ["==", ["get", "service"], "siding"],
+        ["!", ["has", "usage"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-width": 2}
+    },
+    {
+      "id": "yard_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        ["==", ["get", "subclass"], "rail"],
+        ["==", ["get", "service"], "yard"],
+        ["!", ["has", "usage"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-width": 1.5}
+    },
+    {
+      "id": "crossover_tracks",
+      "type": "line",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        ["==", ["get", "subclass"], "rail"],
+        ["==", ["get", "service"], "crossover"],
+        ["!", ["has", "usage"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-width": 1}
+    },
+    {
+      "id": "track_refs",
+      "type": "symbol",
+      "source": "openmaptiles-railway",
+      "source-layer": "railway",
+      "minzoom": 17,
+      "filter": ["all"],
+      "layout": {
+        "text-field": "{track_ref}",
+        "symbol-placement": "line",
+        "text-font": ["Noto Sans Bold"],
+        "text-size": 11
+      },
+      "paint": {
+        "icon-halo-width": 4,
+        "text-halo-color": "rgba(0, 0, 255, 1)",
+        "text-color": "#FFFFFF",
+        "text-halo-width": 4
+      }
+    }
+  ],
+  "id": "orm-standard"
+}
