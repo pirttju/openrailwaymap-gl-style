@@ -1372,13 +1372,70 @@
       "paint": {"circle-radius": 4}
     },
     {
+      "id": "sites-z8-z10",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "railway_poi",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "filter": ["all", ["in", "class", "junction", "service_station", "crossover", "site"]],
+      "layout": {
+        "text-field": "{ref}",
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
+        "text-size": 12
+      },
+      "paint": {
+        "text-halo-color": "#F1F1F1",
+        "text-color": "#616161",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "sites-z11",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "railway_poi",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "class", "junction", "service_station", "crossover", "site"]],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
+        "text-size": 12
+      },
+      "paint": {
+        "text-halo-color": "#F1F1F1",
+        "text-color": "#616161",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "tram-stops-z14",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "railway_poi",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "class", "tram_stop"]],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
+        "text-size": 10
+      },
+      "paint": {
+        "text-halo-color": "#FFFFFF",
+        "text-color": "#D877B8",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "stations-z8-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
       "minzoom": 8,
       "maxzoom": 11,
-      "filter": ["all", ["==", "class", "station"]],
+      "filter": ["all", ["in", "class", "station", "halt"]],
       "layout": {
         "text-field": "{ref}",
         "text-font": ["Metropolis Bold", "Noto Sans Bold"],
@@ -1397,7 +1454,7 @@
       "source-layer": "railway_poi",
       "minzoom": 11,
       "maxzoom": 24,
-      "filter": ["all", ["==", "class", "station"]],
+      "filter": ["all", ["in", "class", "station", "halt"]],
       "layout": {
         "text-field": "{name}",
         "text-font": ["Metropolis Bold", "Noto Sans Bold"],
