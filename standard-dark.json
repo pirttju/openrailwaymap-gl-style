@@ -1175,7 +1175,7 @@
       "layout": {
         "text-field": "{track_ref}",
         "symbol-placement": "line",
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
         "text-size": 11
       },
       "paint": {
@@ -1200,7 +1200,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"]
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1222,7 +1222,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"]
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1240,7 +1240,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"]
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1258,11 +1258,11 @@
       "layout": {
         "text-field": "{railway_position}",
         "text-size": 11,
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"]
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
       },
       "paint": {
-        "text-color": "#a0a0a0",
-        "text-halo-width": 1,
+        "text-color": "#FFFFFF",
+        "text-halo-width": 0.5,
         "text-halo-color": "#797979"
       }
     },
@@ -1294,7 +1294,7 @@
       "filter": ["all", ["==", "class", "station"]],
       "layout": {
         "text-field": "{ref}",
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
         "text-size": 12
       },
       "paint": {
@@ -1314,7 +1314,7 @@
       "filter": ["all", ["==", "class", "station"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
         "text-size": 12
       },
       "paint": {
