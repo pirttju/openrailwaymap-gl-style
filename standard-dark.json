@@ -924,7 +924,12 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "filter": ["all", ["!", ["has", "usage"]], ["!", ["has", "service"]]],
+      "filter": [
+        "all",
+        ["!", ["has", "usage"]],
+        ["!", ["has", "service"]],
+        ["==", ["get", "subclass"], "rail"]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {"line-color": "#B0B0B0"}
     },
@@ -936,6 +941,7 @@
       "filter": [
         "all",
         ["==", ["get", "usage"], "branch"],
+        ["==", ["get", "subclass"], "rail"],
         ["!", ["has", "service"]]
       ],
       "paint": {"line-width": 3.5, "line-color": "#DACA00"}
@@ -948,6 +954,7 @@
       "filter": [
         "all",
         ["==", ["get", "usage"], "main"],
+        ["==", ["get", "subclass"], "rail"],
         ["!", ["has", "service"]]
       ],
       "paint": {"line-width": 3.5, "line-color": "#FF8100"}
@@ -960,6 +967,7 @@
       "filter": [
         "all",
         ["==", ["get", "usage"], "main"],
+        ["==", ["get", "subclass"], "rail"],
         ["==", ["get", "highspeed"], "yes"],
         ["!", ["has", "service"]]
       ],
@@ -970,7 +978,11 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "filter": ["all", ["==", "usage", "industrial"]],
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "industrial"],
+        ["==", ["get", "subclass"], "rail"]
+      ],
       "paint": {"line-width": 2, "line-color": "#87491D"}
     },
     {
@@ -1054,6 +1066,7 @@
       "filter": [
         "all",
         ["==", ["get", "service"], "spur"],
+        ["==", ["get", "subclass"], "rail"],
         ["!", ["has", "usage"]]
       ],
       "layout": {"visibility": "visible"},
