@@ -1349,7 +1349,7 @@
       },
       "paint": {
         "text-color": "#000000",
-        "text-halo-width": 0.5,
+        "text-halo-width": 1.5,
         "text-halo-color": "#FFFFFF"
       }
     },
@@ -1387,7 +1387,7 @@
       "paint": {
         "text-halo-color": "#FFFFFF",
         "text-color": "#0000FF",
-        "text-halo-width": 0.5
+        "text-halo-width": 1.5
       }
     },
     {
@@ -1406,7 +1406,7 @@
       "paint": {
         "text-halo-color": "#FFFFFF",
         "text-color": "#0000FF",
-        "text-halo-width": 0.5
+        "text-halo-width": 1.5
       }
     }
   ],
