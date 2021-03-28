@@ -905,7 +905,7 @@
       "paint": {
         "line-gap-width": 1,
         "line-width": 0.8,
-        "line-color": "#a0a0a0",
+        "line-color": "#B0B0B0",
         "line-opacity": 0.2
       }
     },
@@ -917,7 +917,7 @@
       "minzoom": 10,
       "filter": ["all", ["==", "brunnel", "tunnel"]],
       "layout": {"line-cap": "butt"},
-      "paint": {"line-width": 6, "line-color": "#ffffff", "line-opacity": 0.6}
+      "paint": {"line-width": 6, "line-color": "#FFFFFF", "line-opacity": 0.6}
     },
     {
       "id": "railways",
@@ -926,7 +926,7 @@
       "source-layer": "railway",
       "filter": ["all", ["!", ["has", "usage"]], ["!", ["has", "service"]]],
       "layout": {"visibility": "visible"},
-      "paint": {"line-color": "#a0a0a0"}
+      "paint": {"line-color": "#B0B0B0"}
     },
     {
       "id": "railways-branch",
@@ -993,7 +993,8 @@
       "filter": ["all", ["==", "subclass", "construction"]],
       "paint": {
         "line-width": 3,
-        "line-dasharray": [9,9]
+        "line-dasharray": [9,9],
+        "line-color": "#B0B0B0"
       }
     },
     {
@@ -1004,7 +1005,8 @@
       "filter": ["all", ["==", "subclass", "proposed"]],
       "paint": {
         "line-width": 3,
-        "line-dasharray": [2,8]
+        "line-dasharray": [2,8],
+        "line-color": "#B0B0B0"
       }
     },
     {
@@ -1102,7 +1104,8 @@
       ],
       "paint": {
         "line-width": 1.5,
-        "line-gap-width": 1.5
+        "line-gap-width": 1.5,
+        "line-color": "#B0B0B0"
       }
     },
     {
@@ -1117,7 +1120,8 @@
       ],
       "paint": {
         "line-width": 1.5,
-        "line-gap-width": 1
+        "line-gap-width": 1,
+        "line-color": "#B0B0B0"
       }
     },
     {
@@ -1133,7 +1137,7 @@
         ["!", ["has", "usage"]]
       ],
       "layout": {"visibility": "visible"},
-      "paint": {"line-width": 2}
+      "paint": {"line-width": 2, "line-color": "#B0B0B0"}
     },
     {
       "id": "tracks-yard",
@@ -1148,7 +1152,7 @@
         ["!", ["has", "usage"]]
       ],
       "layout": {"visibility": "visible"},
-      "paint": {"line-width": 1.5}
+      "paint": {"line-width": 1.5, "line-color": "#B0B0B0"}
     },
     {
       "id": "tracks-crossover",
@@ -1163,7 +1167,7 @@
         ["!", ["has", "usage"]]
       ],
       "layout": {"visibility": "visible"},
-      "paint": {"line-width": 1}
+      "paint": {"line-width": 1, "line-color": "#B0B0B0"}
     },
     {
       "id": "track-refs",
@@ -1175,7 +1179,7 @@
       "layout": {
         "text-field": "{track_ref}",
         "symbol-placement": "line",
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
         "text-size": 11
       },
       "paint": {
@@ -1200,7 +1204,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1222,7 +1226,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1240,7 +1244,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1258,12 +1262,12 @@
       "layout": {
         "text-field": "{railway_position}",
         "text-size": 11,
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"]
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"]
       },
       "paint": {
-        "text-color": "#FFFFFF",
+        "text-color": "#000000",
         "text-halo-width": 0.5,
-        "text-halo-color": "#797979"
+        "text-halo-color": "#FFFFFF"
       }
     },
     {
@@ -1294,14 +1298,13 @@
       "filter": ["all", ["==", "class", "station"]],
       "layout": {
         "text-field": "{ref}",
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
         "text-size": 12
       },
       "paint": {
-        "icon-halo-width": 4,
         "text-halo-color": "#FFFFFF",
         "text-color": "#0000FF",
-        "text-halo-width": 4
+        "text-halo-width": 0.5
       }
     },
     {
@@ -1314,14 +1317,13 @@
       "filter": ["all", ["==", "class", "station"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Metropolis Medium", "Noto Sans Bold"],
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
         "text-size": 12
       },
       "paint": {
-        "icon-halo-width": 4,
         "text-halo-color": "#FFFFFF",
         "text-color": "#0000FF",
-        "text-halo-width": 4
+        "text-halo-width": 0.5
       }
     }
   ],
