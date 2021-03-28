@@ -890,7 +890,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["!has", "maxspeed"],
-        ["in", "subclass", "rail", "narrow_gauge", "light_rail", "subway", "tram", "preserved", "construction"]
+        ["!in", "subclass", "abandoned", "razed", "proposed"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {"line-width": 1.5, "line-color": "#808080"}
@@ -905,7 +905,7 @@
         ["==", "$type", "LineString"],
         ["has", "maxspeed"],
         ["!has", "usage"],
-        ["in", "subclass", "rail", "narrow_gauge", "light_rail", "subway", "tram", "preserved", "construction"]
+        ["!in", "subclass", "abandoned", "razed", "proposed"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -997,7 +997,7 @@
         ["==", "$type", "LineString"],
         ["has", "maxspeed"],
         ["has", "usage"],
-        ["in", "subclass", "rail", "narrow_gauge", "light_rail", "subway", "tram", "preserved", "construction"]
+        ["!in", "subclass", "abandoned", "razed", "proposed"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1089,7 +1089,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["has", "maxspeed"],
-        ["in", "subclass", "rail", "narrow_gauge", "light_rail", "subway", "tram", "preserved", "construction"]
+        ["!in", "subclass", "abandoned", "razed", "proposed"]
       ],
       "layout": {
         "text-field": "{maxspeed}",
