@@ -1064,7 +1064,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 10,
+      "minzoom": 9,
       "filter": [
         "all",
         ["==", ["get", "subclass"], "rail"],
@@ -1079,7 +1079,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 10,
+      "minzoom": 9,
       "filter": [
         "all",
         ["==", ["get", "subclass"], "rail"],
@@ -1094,7 +1094,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 10,
+      "minzoom": 9,
       "filter": [
         "all",
         ["==", ["get", "subclass"], "rail"],
@@ -1149,7 +1149,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "brunnel", "bridge"]],
       "paint": {"line-gap-width": 3.5, "line-color": "#797979"}
     },
@@ -1158,7 +1158,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": [
         "any",
         ["==", "subclass", "disused"],
@@ -1177,7 +1177,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "brunnel", "tunnel"]],
       "layout": {"line-cap": "butt"},
       "paint": {"line-width": 6, "line-color": "#FFFFFF", "line-opacity": 0.6}
@@ -1187,7 +1187,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 17,
+      "minzoom": 16,
       "filter": ["all"],
       "layout": {
         "text-field": "{track_ref}",
@@ -1207,7 +1207,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "class", "switch"],
@@ -1230,7 +1230,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "class", "switch"],
@@ -1252,7 +1252,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": ["all", ["==", "class", "switch"], ["==", "resetting", true]],
       "layout": {
         "text-field": "{ref}",
@@ -1270,7 +1270,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 11,
+      "minzoom": 10,
       "filter": ["all", ["==", "class", "milestone"]],
       "layout": {
         "text-field": "{railway_position}",
@@ -1288,7 +1288,7 @@
       "type": "circle",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 14,
+      "minzoom": 13,
       "filter": ["all", ["==", "class", "level_crossing"]],
       "paint": {"circle-radius": 4}
     },
@@ -1297,17 +1297,17 @@
       "type": "circle",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 14,
+      "minzoom": 13,
       "filter": ["all", ["==", "class", "crossing"]],
       "paint": {"circle-radius": 4}
     },
     {
-      "id": "sites-z8-z10",
+      "id": "sites-z7-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 8,
-      "maxzoom": 11,
+      "minzoom": 7,
+      "maxzoom": 10,
       "filter": ["all", ["in", "class", "junction", "service_station", "crossover", "site"]],
       "layout": {
         "text-field": "{ref}",
@@ -1321,11 +1321,11 @@
       }
     },
     {
-      "id": "sites-z11",
+      "id": "sites-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 11,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["all", ["in", "class", "junction", "service_station", "crossover", "site"]],
       "layout": {
@@ -1340,12 +1340,12 @@
       }
     },
     {
-      "id": "yards-z8-z10",
+      "id": "yards-z7-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 8,
-      "maxzoom": 11,
+      "minzoom": 7,
+      "maxzoom": 10,
       "filter": ["all", ["in", "class", "yard"]],
       "layout": {
         "text-field": "{ref}",
@@ -1359,11 +1359,11 @@
       }
     },
     {
-      "id": "yards-z11",
+      "id": "yards-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 11,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["all", ["in", "class", "yard"]],
       "layout": {
@@ -1397,12 +1397,12 @@
       }
     },
     {
-      "id": "stations-z8-z10",
+      "id": "stations-z7-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 8,
-      "maxzoom": 11,
+      "minzoom": 7,
+      "maxzoom": 10,
       "filter": ["all", ["in", "class", "station", "halt"]],
       "layout": {
         "text-field": "{ref}",
@@ -1416,11 +1416,11 @@
       }
     },
     {
-      "id": "stations-z11",
+      "id": "stations-z10",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway_poi",
-      "minzoom": 11,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["all", ["in", "class", "station", "halt"]],
       "layout": {
