@@ -1021,7 +1021,7 @@
         ["==", ["get", "usage"], "branch"],
         ["!", ["has", "service"]]
       ],
-      "paint": {"line-color": "#DACA00"}
+      "paint": {"line-width": 3.5, "line-color": "#DACA00"}
     },
     {
       "id": "railways-main",
@@ -1033,7 +1033,7 @@
         ["==", ["get", "usage"], "main"],
         ["!", ["has", "service"]]
       ],
-      "paint": {"line-color": "#FF8100"}
+      "paint": {"line-width": 3.5, "line-color": "#FF8100"}
     },
     {
       "id": "railways-highspeed",
@@ -1046,7 +1046,7 @@
         ["==", ["get", "highspeed"], "yes"],
         ["!", ["has", "service"]]
       ],
-      "paint": {"line-color": "#FF0C00"}
+      "paint": {"line-width": 3.5, "line-color": "#FF0C00"}
     },
     {
       "id": "railways-industrial",
@@ -1054,7 +1054,78 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "usage", "industrial"]],
-      "paint": {"line-color": "#87491D"}
+      "paint": {"line-width": 2, "line-color": "#87491D"}
+    },
+    {
+      "id": "railways-preserved",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "preserved"]],
+      "paint": {
+        "line-width": 2,
+        "line-color": "#70584D",
+        "line-dasharray": [3,10]
+      }
+    },
+    {
+      "id": "railways-construction",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "construction"]],
+      "paint": {
+        "line-width": 3,
+        "line-dasharray": [9,9]
+      }
+    },
+    {
+      "id": "railways-proposed",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "proposed"]],
+      "paint": {
+        "line-width": 3,
+        "line-dasharray": [2,8]
+      }
+    },
+    {
+      "id": "railways-disused",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "disused"]],
+      "paint": {
+        "line-width": 3,
+        "line-color": "#70584D"
+      }
+    },
+    {
+      "id": "railways-abandoned",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "abandoned"]],
+      "paint": {
+        "line-width": 3,
+        "line-color": "#70584D",
+        "line-dasharray": [5,5],
+        "line-opacity": 0.8
+      }
+    },
+    {
+      "id": "railways-razed",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "subclass", "razed"]],
+      "paint": {
+        "line-width": 3,
+        "line-color": "#70584D",
+        "line-dasharray": [3,7],
+        "line-opacity": 0.6
+      }
     },
     {
       "id": "tracks-spur",
@@ -1067,7 +1138,7 @@
         ["!", ["has", "usage"]]
       ],
       "layout": {"visibility": "visible"},
-      "paint": {"line-color": "#87491D"}
+      "paint": {"line-width": 3, "line-color": "#87491D"}
     },
     {
       "id": "tracks-light-rail",
@@ -1075,7 +1146,10 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "subclass", "light_rail"]],
-      "paint": {"line-color": "#00BD14"}
+      "paint": {
+        "line-color": "#00BD14",
+        "line-width": 2.5
+      }
     },
     {
       "id": "tracks-subway",
@@ -1083,7 +1157,10 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "subclass", "subway"]],
-      "paint": {"line-color": "#0300C3"}
+      "paint": {
+        "line-color": "#0300C3",
+        "line-width": 2.5
+      }
     },
     {
       "id": "tracks-tram",
@@ -1091,7 +1168,40 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "subclass", "tram"]],
-      "paint": {"line-color": "#D877B8"}
+      "paint": {
+        "line-color": "#D877B8",
+        "line-width": 2.5
+      }
+    },
+    {
+      "id": "tracks-narrow-gauge",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "subclass"], "narrow_gauge"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {
+        "line-width": 1.5,
+        "line-gap-width": 1.5
+      }
+    },
+    {
+      "id": "tracks-narrow-gauge-siding",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "subclass"], "narrow_gauge"],
+        ["!", ["has", "usage"]]
+      ],
+      "paint": {
+        "line-width": 1.5,
+        "line-gap-width": 1
+      }
     },
     {
       "id": "tracks-siding",
@@ -1139,7 +1249,7 @@
       "paint": {"line-width": 1}
     },
     {
-      "id": "track_refs",
+      "id": "track-refs",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "railway",
@@ -1153,7 +1263,7 @@
       },
       "paint": {
         "icon-halo-width": 4,
-        "text-halo-color": "rgba(0, 0, 255, 1)",
+        "text-halo-color": "#0000FF",
         "text-color": "#FFFFFF",
         "text-halo-width": 4
       }
@@ -1269,6 +1379,12 @@
         "text-field": "{ref}",
         "text-font": ["Metropolis Regular", "Noto Sans Regular"],
         "text-size": 12
+      },
+      "paint": {
+        "icon-halo-width": 4,
+        "text-halo-color": "#FFFFFF",
+        "text-color": "#0000FF",
+        "text-halo-width": 4
       }
     },
     {
@@ -1283,6 +1399,12 @@
         "text-field": "{name}",
         "text-font": ["Metropolis Regular", "Noto Sans Regular"],
         "text-size": 12
+      },
+      "paint": {
+        "icon-halo-width": 4,
+        "text-halo-color": "#FFFFFF",
+        "text-color": "#0000FF",
+        "text-halo-width": 4
       }
     }
   ],
