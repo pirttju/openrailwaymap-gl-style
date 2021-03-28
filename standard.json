@@ -965,44 +965,6 @@
       }
     },
     {
-      "id": "bridges",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 10,
-      "filter": ["all", ["==", "brunnel", "bridge"]],
-      "paint": {"line-gap-width": 3.5, "line-color": "#797979"}
-    },
-    {
-      "id": "casing-historic",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 9,
-      "filter": [
-        "any",
-        ["==", "subclass", "disused"],
-        ["==", "subclass", "abandoned"],
-        ["==", "subclass", "razed"]
-      ],
-      "paint": {
-        "line-gap-width": 1,
-        "line-width": 0.8,
-        "line-color": "#000000",
-        "line-opacity": 0.2
-      }
-    },
-    {
-      "id": "tunnels",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 10,
-      "filter": ["all", ["==", "brunnel", "tunnel"]],
-      "layout": {"line-cap": "butt"},
-      "paint": {"line-width": 6, "line-color": "#FFFFFF", "line-opacity": 0.6}
-    },
-    {
       "id": "railways",
       "type": "line",
       "source": "openmaptiles",
@@ -1015,46 +977,6 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {"line-color": "#000000"}
-    },
-    {
-      "id": "railways-branch",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": [
-        "all",
-        ["==", ["get", "usage"], "branch"],
-        ["==", ["get", "subclass"], "rail"],
-        ["!", ["has", "service"]]
-      ],
-      "paint": {"line-width": 3.5, "line-color": "#DACA00"}
-    },
-    {
-      "id": "railways-main",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": [
-        "all",
-        ["==", ["get", "usage"], "main"],
-        ["==", ["get", "subclass"], "rail"],
-        ["!", ["has", "service"]]
-      ],
-      "paint": {"line-width": 3.5, "line-color": "#FF8100"}
-    },
-    {
-      "id": "railways-highspeed",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": [
-        "all",
-        ["==", ["get", "usage"], "main"],
-        ["==", ["get", "subclass"], "rail"],
-        ["==", ["get", "highspeed"], "yes"],
-        ["!", ["has", "service"]]
-      ],
-      "paint": {"line-width": 3.5, "line-color": "#FF0C00"}
     },
     {
       "id": "railways-industrial",
@@ -1264,6 +1186,84 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {"line-width": 1, "line-color": "#000000"}
+    },
+    {
+      "id": "railways-branch",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "branch"],
+        ["==", ["get", "subclass"], "rail"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-width": 3.5, "line-color": "#DACA00"}
+    },
+    {
+      "id": "railways-main",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "main"],
+        ["==", ["get", "subclass"], "rail"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-width": 3.5, "line-color": "#FF8100"}
+    },
+    {
+      "id": "railways-highspeed",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        ["==", ["get", "usage"], "main"],
+        ["==", ["get", "subclass"], "rail"],
+        ["==", ["get", "highspeed"], "yes"],
+        ["!", ["has", "service"]]
+      ],
+      "paint": {"line-width": 3.5, "line-color": "#FF0C00"}
+    },
+    {
+      "id": "bridges",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 9,
+      "filter": ["all", ["==", "brunnel", "bridge"]],
+      "paint": {"line-gap-width": 3.5, "line-color": "#797979"}
+    },
+    {
+      "id": "casing-historic",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 9,
+      "filter": [
+        "any",
+        ["==", "subclass", "disused"],
+        ["==", "subclass", "abandoned"],
+        ["==", "subclass", "razed"]
+      ],
+      "paint": {
+        "line-gap-width": 1,
+        "line-width": 0.8,
+        "line-color": "#000000",
+        "line-opacity": 0.2
+      }
+    },
+    {
+      "id": "tunnels",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 9,
+      "filter": ["all", ["==", "brunnel", "tunnel"]],
+      "layout": {"line-cap": "butt"},
+      "paint": {"line-width": 6, "line-color": "#FFFFFF", "line-opacity": 0.6}
     },
     {
       "id": "track-refs",
