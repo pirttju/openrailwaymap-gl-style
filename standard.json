@@ -705,7 +705,6 @@
       "maxzoom": 14,
       "filter": ["all", ["==", "$type", "Point"], ["==", "class", "village"]],
       "layout": {
-        "icon-size": 0.4,
         "text-anchor": "left",
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -716,7 +715,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(117, 129, 145)",
         "text-halo-blur": 1,
         "text-halo-color": "rgb(242,243,240)",
@@ -732,8 +730,6 @@
       "maxzoom": 15,
       "filter": ["all", ["==", "$type", "Point"], ["==", "class", "town"]],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [8, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -744,7 +740,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(117, 129, 145)",
         "text-halo-blur": 1,
         "text-halo-color": "rgb(242,243,240)",
@@ -764,8 +759,6 @@
         ["all", ["!=", "capital", 2], ["==", "class", "city"], [">", "rank", 3]]
       ],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [8, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -776,7 +769,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(117, 129, 145)",
         "text-halo-blur": 1,
         "text-halo-color": "rgb(242,243,240)",
@@ -796,8 +788,6 @@
         ["all", ["==", "capital", 2], ["==", "class", "city"]]
       ],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "star-11"], [8, ""]]},
-        "icon-size": 1,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -808,7 +798,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(117, 129, 145)",
         "text-halo-blur": 1,
         "text-halo-color": "rgb(242,243,240)",
@@ -833,8 +822,6 @@
         ]
       ],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [8, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -845,7 +832,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(117, 129, 145)",
         "text-halo-blur": 1,
         "text-halo-color": "rgb(242,243,240)",
@@ -1279,7 +1265,6 @@
         "text-size": 11
       },
       "paint": {
-        "icon-halo-width": 4,
         "text-halo-color": "#0000FF",
         "text-color": "#FFFFFF",
         "text-halo-width": 4

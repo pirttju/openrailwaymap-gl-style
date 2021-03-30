@@ -400,82 +400,6 @@
       }
     },
     {
-      "id": "road_oneway",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          1
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "icon-image": "oneway",
-        "symbol-spacing": 200,
-        "icon-padding": 2,
-        "icon-rotation-alignment": "map",
-        "icon-rotate": 0,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "icon-opacity": 0.5
-      }
-    },
-    {
-      "id": "road_oneway_opposite",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          -1
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "icon-image": "oneway",
-        "symbol-spacing": 200,
-        "icon-padding": 2,
-        "icon-rotation-alignment": "map",
-        "icon-rotate": 180,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "icon-opacity": 0.5
-      }
-    },
-    {
       "id": "highway_motorway_subtle",
       "type": "line",
       "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
@@ -666,7 +590,6 @@
       "maxzoom": 14,
       "filter": ["all", ["==", "$type", "Point"], ["==", "class", "village"]],
       "layout": {
-        "icon-size": 0.4,
         "text-anchor": "left",
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -677,7 +600,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(101,101,101)",
         "text-halo-blur": 1,
         "text-halo-color": "rgba(0,0,0,0.7)",
@@ -693,8 +615,6 @@
       "maxzoom": 15,
       "filter": ["all", ["==", "$type", "Point"], ["==", "class", "town"]],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [9, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -705,7 +625,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(101,101,101)",
         "text-halo-blur": 1,
         "text-halo-color": "rgba(0,0,0,0.7)",
@@ -726,8 +645,6 @@
         [">", "rank", 3]
       ],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [9, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -738,7 +655,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(101,101,101)",
         "text-halo-blur": 1,
         "text-halo-color": "rgba(0,0,0,0.7)",
@@ -759,8 +675,6 @@
         ["==", "class", "city"]
       ],
       "layout": {
-        "icon-image": {"base": 1, "stops": [[0, "circle-11"], [9, ""]]},
-        "icon-size": 0.4,
         "text-anchor": {"base": 1, "stops": [[0, "left"], [8, "center"]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Roboto Regular"],
@@ -771,7 +685,6 @@
         "visibility": "visible"
       },
       "paint": {
-        "icon-opacity": 0.7,
         "text-color": "rgb(101,101,101)",
         "text-halo-blur": 1,
         "text-halo-color": "rgba(0,0,0,0.7)",
@@ -1196,7 +1109,6 @@
         "text-size": 11
       },
       "paint": {
-        "icon-halo-width": 4,
         "text-halo-color": "#0000FF",
         "text-color": "#FFFFFF",
         "text-halo-width": 4
