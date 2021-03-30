@@ -1192,7 +1192,7 @@
       "layout": {
         "text-field": "{track_ref}",
         "symbol-placement": "line",
-        "text-font": ["Roboto Bold"],
+        "text-font": ["Roboto Medium"],
         "text-size": 11
       },
       "paint": {
@@ -1217,7 +1217,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Roboto Bold"]
+        "text-font": ["Roboto Medium"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1239,7 +1239,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Roboto Bold"]
+        "text-font": ["Roboto Medium"]
       },
       "paint": {
         "text-color": "#000000",
@@ -1257,7 +1257,7 @@
       "layout": {
         "text-field": "{ref}",
         "text-size": 11,
-        "text-font": ["Roboto Bold"]
+        "text-font": ["Roboto Medium"]
       },
       "paint": {
         "text-color": "#000000",

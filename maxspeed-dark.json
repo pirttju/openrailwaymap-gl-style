@@ -1094,7 +1094,7 @@
       "layout": {
         "text-field": "{maxspeed}",
         "symbol-placement": "line",
-        "text-font": ["Roboto Bold"],
+        "text-font": ["Roboto Medium"],
         "text-size": 12
       },
       "paint": {
